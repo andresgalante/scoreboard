@@ -1,4 +1,4 @@
-# Pipeline dashboard
+# Scoreboard dashboard
 
 ``npm install``
 
