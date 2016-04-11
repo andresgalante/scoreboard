@@ -77,6 +77,7 @@ body{
     background-image: linear-gradient($start-color, $end-color);
   }
   .score-porcentage{
+    border-top-color: $end-color;
     span{
       background: $end-color;
       color: $start-color;
@@ -98,7 +99,6 @@ body{
 .score{
   text-align: center;
   background: $color-background-env;
-  border-radius: 0 0 2px 2px;
   flex: 1 0 10%;
   margin: 30px 60px 30px 0;
   position: relative;
@@ -126,10 +126,10 @@ body{
     transform-origin: bottom left;
     content: "";
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    top: 134px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    top: 124px;
   }
   &:nth-of-type(1){
     @include color-settings($color-orange, $color-orange-dark);
@@ -178,17 +178,20 @@ body{
 .score-porcentage{
   transform-origin: bottom left;
   position: absolute;
-  bottom: 10px;
+  bottom: 1px;
   top:0;
-  top: 134px;
-  right: -39px;
+  top: 124px;
+  right: -45px;
+  left: 1px;
   z-index: 1;
   animation: move 4s ease infinite;
+  border-top: 2px solid red;
   span{
+    float: right;
     display: block;
     padding: 2px 0;
-    width: 34px;
+    width: 40px;
     font-weight: $font-weight-bold;
-    border-radius: 2px;
+    border-radius: 0 0 2px 2px;
   }
 }

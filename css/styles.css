@@ -74,7 +74,6 @@ body {
 .score {
   text-align: center;
   background: #002a42;
-  border-radius: 0 0 2px 2px;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 10%;
       -ms-flex: 1 0 10%;
@@ -103,16 +102,18 @@ body {
             transform-origin: bottom left;
     content: "";
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    right: 10px;
-    top: 134px; }
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    top: 124px; }
   .score:nth-of-type(1):after {
     background-image: -webkit-linear-gradient(#f7bd7f, #b35c00);
     background-image: linear-gradient(#f7bd7f, #b35c00); }
-  .score:nth-of-type(1) .score-porcentage span {
-    background: #b35c00;
-    color: #f7bd7f; }
+  .score:nth-of-type(1) .score-porcentage {
+    border-top-color: #b35c00; }
+    .score:nth-of-type(1) .score-porcentage span {
+      background: #b35c00;
+      color: #f7bd7f; }
   .score:nth-of-type(1) .score-header h1 {
     background: #b35c00;
     color: #f7bd7f; }
@@ -123,9 +124,11 @@ body {
   .score:nth-of-type(2):after {
     background-image: -webkit-linear-gradient(#7dbdc3, #005c66);
     background-image: linear-gradient(#7dbdc3, #005c66); }
-  .score:nth-of-type(2) .score-porcentage span {
-    background: #005c66;
-    color: #7dbdc3; }
+  .score:nth-of-type(2) .score-porcentage {
+    border-top-color: #005c66; }
+    .score:nth-of-type(2) .score-porcentage span {
+      background: #005c66;
+      color: #7dbdc3; }
   .score:nth-of-type(2) .score-header h1 {
     background: #005c66;
     color: #7dbdc3; }
@@ -136,9 +139,11 @@ body {
   .score:nth-of-type(3):after {
     background-image: -webkit-linear-gradient(#a18fff, #582fc0);
     background-image: linear-gradient(#a18fff, #582fc0); }
-  .score:nth-of-type(3) .score-porcentage span {
-    background: #582fc0;
-    color: #a18fff; }
+  .score:nth-of-type(3) .score-porcentage {
+    border-top-color: #582fc0; }
+    .score:nth-of-type(3) .score-porcentage span {
+      background: #582fc0;
+      color: #a18fff; }
   .score:nth-of-type(3) .score-header h1 {
     background: #582fc0;
     color: #a18fff; }
@@ -149,9 +154,11 @@ body {
   .score:nth-of-type(4):after {
     background-image: -webkit-linear-gradient(#00b9e4, #007d9c);
     background-image: linear-gradient(#00b9e4, #007d9c); }
-  .score:nth-of-type(4) .score-porcentage span {
-    background: #007d9c;
-    color: #00b9e4; }
+  .score:nth-of-type(4) .score-porcentage {
+    border-top-color: #007d9c; }
+    .score:nth-of-type(4) .score-porcentage span {
+      background: #007d9c;
+      color: #00b9e4; }
   .score:nth-of-type(4) .score-header h1 {
     background: #007d9c;
     color: #00b9e4; }
@@ -162,9 +169,11 @@ body {
   .score:nth-of-type(5):after {
     background-image: -webkit-linear-gradient(#ce0000, #8b0000);
     background-image: linear-gradient(#ce0000, #8b0000); }
-  .score:nth-of-type(5) .score-porcentage span {
-    background: #8b0000;
-    color: #ce0000; }
+  .score:nth-of-type(5) .score-porcentage {
+    border-top-color: #8b0000; }
+    .score:nth-of-type(5) .score-porcentage span {
+      background: #8b0000;
+      color: #ce0000; }
   .score:nth-of-type(5) .score-header h1 {
     background: #8b0000;
     color: #ce0000; }
@@ -175,9 +184,11 @@ body {
   .score:nth-of-type(6):after {
     background-image: -webkit-linear-gradient(#f0ab00, #b58100);
     background-image: linear-gradient(#f0ab00, #b58100); }
-  .score:nth-of-type(6) .score-porcentage span {
-    background: #b58100;
-    color: #f0ab00; }
+  .score:nth-of-type(6) .score-porcentage {
+    border-top-color: #b58100; }
+    .score:nth-of-type(6) .score-porcentage span {
+      background: #b58100;
+      color: #f0ab00; }
   .score:nth-of-type(6) .score-header h1 {
     background: #b58100;
     color: #f0ab00; }
@@ -210,16 +221,19 @@ body {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   position: absolute;
-  bottom: 10px;
+  bottom: 1px;
   top: 0;
-  top: 134px;
-  right: -39px;
+  top: 124px;
+  right: -45px;
+  left: 1px;
   z-index: 1;
   -webkit-animation: move 4s ease infinite;
-          animation: move 4s ease infinite; }
+          animation: move 4s ease infinite;
+  border-top: 2px solid red; }
   .score-porcentage span {
+    float: right;
     display: block;
     padding: 2px 0;
-    width: 34px;
+    width: 40px;
     font-weight: 600;
-    border-radius: 2px; }
+    border-radius: 0 0 2px 2px; }
