@@ -49,10 +49,9 @@ body{
   }
 }
 
-
 .container{
-  perspective: 50em;
-    transform: perspective(50em) rotateX(50deg);
+//  perspective: 50em;
+//  transform: perspective(70em) rotateX(50deg);
   margin: 0px 30px;
   overflow: hidden;
   height: 100%;
@@ -64,7 +63,7 @@ body{
 
   &:before{
 //    content: "";
-    animation: bg-move 8s linear infinite;
+    animation: bg-move 10s linear infinite;
     position: absolute;
     height: 100vh;
     left:0;
@@ -79,16 +78,6 @@ body{
     background-blend-mode: multiply;
     mix-blend-mode: screen;
     filter: invert(1);
-
-
-//     background-color:transparent;
-//     background-image:
-//     radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-//     radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-//     radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-//     radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-//     background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-//    background-position: 0 0, 40% 40%, 130% 130%, 70% 70%;
   }
 
   &:after{
@@ -150,19 +139,15 @@ body{
   }
   &:nth-of-type(1){
     @include color-settings($color-orange, $color-orange-dark);
-    transform: translateY(30%);
   }
   &:nth-of-type(2){
     @include color-settings($color-teal, $color-teal-dark);
-    transform: translateY(10%);
   }
   &:nth-of-type(3){
     @include color-settings($color-violet, $color-violet-dark);
-    transform: translateY(40%);
   }
   &:nth-of-type(4){
     @include color-settings($color-green, $color-green-dark);
-    transform: translateY(50%);
   }
   &:nth-of-type(5){
     @include color-settings($color-blue, $color-blue-dark);
