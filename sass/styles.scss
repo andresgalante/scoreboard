@@ -152,6 +152,12 @@ body{
   }
 }
 
+@keyframes hoverboard-glow{
+  to{
+    filter: opacity(1);
+  }
+}
+
 
 .score{
   animation: hoverboard-shadow 1s ease-in-out alternate infinite;
@@ -177,37 +183,37 @@ body{
   &:nth-of-type(1){
     @include color-settings($color-orange, $color-orange-dark);
     animation-delay: 1.2s;
-    .score-details{animation-delay: 1.2s;}
+    .score-details, .score-details:after{animation-delay: 1.2s;}
   }
   &:nth-of-type(2){
     @include color-settings($color-teal, $color-teal-dark);
     animation-delay: 1.4s;
-    .score-details{animation-delay: 1.4s;}
+    .score-details, .score-details:after{animation-delay: 1.4s;}
   }
   &:nth-of-type(3){
     @include color-settings($color-violet, $color-violet-dark);
     animation-delay: .8s;
-    .score-details{animation-delay: .8s;}
+    .score-details, .score-details:after{animation-delay: .8s;}
   }
   &:nth-of-type(4){
     @include color-settings($color-green, $color-green-dark);
     animation-delay: .4s;
-    .score-details{animation-delay: .4s;}
+    .score-details, .score-details:after{animation-delay: .4s;}
   }
   &:nth-of-type(5){
     @include color-settings($color-blue, $color-blue-dark);
     animation-delay: 1.6s;
-    .score-details{animation-delay: 1.6s;}
+    .score-details, .score-details:after{animation-delay: 1.6s;}
   }
   &:nth-of-type(6){
     @include color-settings($color-red, $color-red-dark);
     animation-delay: 2s;
-    .score-details{animation-delay: 2s;}
+    .score-details, .score-details:after{animation-delay: 2s;}
   }
   &:nth-of-type(7){
     @include color-settings($color-yellow, $color-yellow-dark);
     animation-delay: 1.8s;
-    .score-details{animation-delay: 1.8s;}
+    .score-details, .score-details:after{animation-delay: 1.8s;}
   }
 }
 
@@ -259,6 +265,8 @@ body{
     }
   }
   &:after{
+    filter: opacity(.5);
+    animation: hoverboard-glow 1s ease-in-out alternate infinite;
     background-image: linear-gradient(rgba(255,255,255,.2), transparent 40%);
     border-radius: 3px 3px 0 0;
     content: "";
