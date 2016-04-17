@@ -350,3 +350,15 @@ body {
     .score-details p span {
       font-weight: 300;
       font-size: 12px; }
+  .score-details:after {
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), transparent 40%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), transparent 40%);
+    border-radius: 3px 3px 0 0;
+    content: "";
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    z-index: 4;
+    mix-blend-mode: screen; }
