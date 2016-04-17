@@ -30,7 +30,9 @@ html{
 }
 
 body{
-  background: $color-background;
+  background-image: radial-gradient(55% 20% at top, lighten($color-background, 8%), $color-background 100%);
+  background-position: top center;
+  background-color: $color-background;
   color: $color-text;
   font-family: 'Open Sans', sans-serif;
   font-weight: $font-weight-normal;

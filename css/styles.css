@@ -3,7 +3,10 @@ html {
   height: 100%; }
 
 body {
-  background: #002235;
+  background-image: -webkit-radial-gradient(55% 20% at top, #003c5e, #002235 100%);
+  background-image: radial-gradient(55% 20% at top, #003c5e, #002235 100%);
+  background-position: top center;
+  background-color: #002235;
   color: #7cdbf3;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
