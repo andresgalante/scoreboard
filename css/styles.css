@@ -123,13 +123,13 @@ body {
 
 @-webkit-keyframes hoverboard-glow {
   to {
-    -webkit-filter: opacity(1);
-            filter: opacity(1); } }
+    -webkit-filter: opacity(0.7);
+            filter: opacity(0.7); } }
 
 @keyframes hoverboard-glow {
   to {
-    -webkit-filter: opacity(1);
-            filter: opacity(1); } }
+    -webkit-filter: opacity(0.7);
+            filter: opacity(0.7); } }
 
 .score {
   -webkit-animation: hoverboard-shadow 1s ease-in-out alternate infinite;
@@ -361,8 +361,8 @@ body {
       font-weight: 300;
       font-size: 12px; }
   .score-details:after {
-    -webkit-filter: opacity(0.5);
-            filter: opacity(0.5);
+    -webkit-filter: opacity(1);
+            filter: opacity(1);
     -webkit-animation: hoverboard-glow 1s ease-in-out alternate infinite;
             animation: hoverboard-glow 1s ease-in-out alternate infinite;
     background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), transparent 40%);

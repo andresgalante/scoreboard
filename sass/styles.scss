@@ -154,10 +154,9 @@ body{
 
 @keyframes hoverboard-glow{
   to{
-    filter: opacity(1);
+    filter: opacity(.7);
   }
 }
-
 
 .score{
   animation: hoverboard-shadow 1s ease-in-out alternate infinite;
@@ -265,7 +264,7 @@ body{
     }
   }
   &:after{
-    filter: opacity(.5);
+    filter: opacity(1);
     animation: hoverboard-glow 1s ease-in-out alternate infinite;
     background-image: linear-gradient(rgba(255,255,255,.2), transparent 40%);
     border-radius: 3px 3px 0 0;
