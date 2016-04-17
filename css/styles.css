@@ -22,7 +22,14 @@ body {
   to {
     background-position: 0 100%; } }
 
+body {
+  overflow: hidden; }
+
 .container {
+  -webkit-transform: perspective(100em) rotateX(40deg) scale(1.2, 1.8);
+          transform: perspective(100em) rotateX(40deg) scale(1.2, 1.8);
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
   margin: 0px 30px;
   overflow: hidden;
   height: 100%;
@@ -47,22 +54,18 @@ body {
       -ms-flex-align: stretch;
           align-items: stretch; }
   .container:before {
-    -webkit-animation: bg-move 10s linear infinite;
-            animation: bg-move 10s linear infinite;
+    content: "";
+    -webkit-animation: bg-move 3s linear infinite;
+            animation: bg-move 3s linear infinite;
     position: absolute;
     height: 100vh;
     left: 0;
     right: 0;
     z-index: -1;
-    background: -webkit-linear-gradient(315deg, #fff 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px), -webkit-linear-gradient(225deg, #fff 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px) 0 64px;
-    background: linear-gradient(135deg, #fff 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px), linear-gradient(225deg, #fff 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px) 0 64px;
-    background-color: #fff;
-    background-size: 64px 128px;
-    background-position: 0 0;
-    background-blend-mode: multiply;
-    mix-blend-mode: screen;
-    -webkit-filter: invert(1);
-            filter: invert(1); }
+    background-image: -webkit-linear-gradient(#002235, transparent), -webkit-linear-gradient(top, #007d9c, #007d9c 1px, transparent 1px);
+    background-image: linear-gradient(#002235, transparent), linear-gradient(to bottom, #007d9c, #007d9c 1px, transparent 1px);
+    background-size: 100% 100%, 100% 20%;
+    mix-blend-mode: normal, screen; }
   .container:after {
     content: "";
     -webkit-animation: bg-move 7s linear infinite;
@@ -72,12 +75,26 @@ body {
     left: 0;
     right: 0;
     z-index: -2;
-    background: -webkit-linear-gradient(#002235 18px, transparent 18px) 0 -2px, -webkit-linear-gradient(left, #002235 18px, transparent 0px) -2px 0;
-    background: linear-gradient(#002235 18px, transparent 18px) 0 -2px, linear-gradient(90deg, #002235 18px, transparent 0px) -2px 0;
+    background: -webkit-linear-gradient(#002235, transparent) 0 0px, -webkit-linear-gradient(#002235 18px, transparent 18px) 0 -2px, -webkit-linear-gradient(left, #002235 18px, transparent 0px) -2px 0;
+    background: linear-gradient(#002235, transparent) 0 0px, linear-gradient(#002235 18px, transparent 18px) 0 -2px, linear-gradient(90deg, #002235 18px, transparent 0px) -2px 0;
     background-color: #007d9c;
-    background-size: 20px 20px, 20px 20px; }
+    background-size: 100% 100%, 20px 20px, 20px 20px; }
+
+@-webkit-keyframes pulse-red {
+  to {
+    -webkit-filter: drop-shadow(0 0px 10px #00b9e4);
+            filter: drop-shadow(0 0px 10px #00b9e4); } }
+
+@keyframes pulse-red {
+  to {
+    -webkit-filter: drop-shadow(0 0px 10px #00b9e4);
+            filter: drop-shadow(0 0px 10px #00b9e4); } }
 
 .score {
+  -webkit-filter: drop-shadow(0 40px 10px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0 40px 10px rgba(0, 0, 0, 0.3));
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
   text-align: center;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 10%;
@@ -85,6 +102,9 @@ body {
           flex: 1 0 10%;
   margin: 30px 30px 0 30px;
   position: relative; }
+  .score.winner h2 {
+    -webkit-animation: pulse-red 1s ease-in-out alternate infinite;
+            animation: pulse-red 1s ease-in-out alternate infinite; }
   .score:after {
     content: "";
     position: absolute;

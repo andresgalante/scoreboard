@@ -23,6 +23,7 @@ $font-weight-light:         300;
 $font-weight-normal:        400;
 $font-weight-bold:          600;
 $font-size-base:            12px;
+$easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
 html{
   height: 100%;
@@ -49,9 +50,12 @@ body{
   }
 }
 
+body{
+  overflow: hidden;
+}
 .container{
-//  perspective: 50em;
-//  transform: perspective(70em) rotateX(50deg);
+  transform: perspective(100em) rotateX(40deg) scale(1.2, 1.8) ;
+  transform-origin: 50% 100%;
   margin: 0px 30px;
   overflow: hidden;
   height: 100%;
@@ -62,22 +66,18 @@ body{
   align-items: stretch;
 
   &:before{
-//    content: "";
-    animation: bg-move 10s linear infinite;
+    content: "";
+    animation: bg-move 3s linear infinite;
     position: absolute;
     height: 100vh;
     left:0;
     right: 0;
     z-index: -1;
-    background:
-    linear-gradient(135deg, #fff 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
-    linear-gradient(225deg, #fff 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
-    background-color:#fff;
-    background-size: 64px 128px;
-    background-position: 0 0;
-    background-blend-mode: multiply;
-    mix-blend-mode: screen;
-    filter: invert(1);
+    background-image:
+      linear-gradient($color-background, transparent),
+      linear-gradient(to bottom, $color-blue-dark, $color-blue-dark 1px, transparent 1px);
+    background-size: 100% 100%, 100% 20%;
+     mix-blend-mode: normal, screen;
   }
 
   &:after{
@@ -89,10 +89,11 @@ body{
     right: 0;
     z-index: -2;
     background:
+      linear-gradient($color-background, transparent) 0 0px,
       linear-gradient($color-background  18px, transparent 18px) 0 -2px,
       linear-gradient(90deg, $color-background 18px, transparent 0px) -2px 0;
     background-color: $color-blue-dark;
-    background-size: 20px 20px, 20px 20px;
+    background-size: 100% 100%, 20px 20px, 20px 20px;
   }
 
 }
@@ -122,12 +123,24 @@ body{
   }
 }
 
+@keyframes pulse-red{
+  to{
+    filter:drop-shadow(0 0px 10px $color-blue);
+  }
+}
+
 .score{
+  filter:drop-shadow(0 40px 10px rgba(0,0,0,.3));
+  transition: .5s all ease;
   text-align: center;
-//  background: $color-background-env;
   flex: 1 0 10%;
   margin: 30px 30px 0 30px;
   position: relative;
+  &.winner{
+    h2{
+      animation: pulse-red 1s ease-in-out alternate infinite;
+    }
+  }
   &:after{
     content: "";
     position: absolute;
