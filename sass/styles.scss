@@ -133,8 +133,28 @@ body{
   }
 }
 
+@keyframes hoverboard-shadow{
+  from{
+    filter:drop-shadow(0 30px 5px rgba(0,0,0,.5));
+  }
+  to{
+    filter:drop-shadow(0 50px 10px rgba(0,0,0,.3));
+  }
+}
+
+@keyframes hoverboard-scale{
+  from{
+    transform: scale3d(1, 1, 1);
+  }
+  to{
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+
+
 .score{
-  filter:drop-shadow(0 50px 10px rgba(0,0,0,.3));
+//  filter:drop-shadow(0 50px 10px rgba(0,0,0,.3));
+  animation: hoverboard-shadow 1s ease-in-out alternate infinite;
   transition: .5s all ease;
   text-align: center;
   flex: 1 0 10%;
@@ -156,29 +176,45 @@ body{
   }
   &:nth-of-type(1){
     @include color-settings($color-orange, $color-orange-dark);
+    animation-delay: 1.2s;
+    .score-details{animation-delay: 1.2s;}
   }
   &:nth-of-type(2){
     @include color-settings($color-teal, $color-teal-dark);
+    animation-delay: 1.4s;
+    .score-details{animation-delay: 1.4s;}
   }
   &:nth-of-type(3){
     @include color-settings($color-violet, $color-violet-dark);
+    animation-delay: .8s;
+    .score-details{animation-delay: .8s;}
   }
   &:nth-of-type(4){
     @include color-settings($color-green, $color-green-dark);
+    animation-delay: .4s;
+    .score-details{animation-delay: .4s;}
   }
   &:nth-of-type(5){
     @include color-settings($color-blue, $color-blue-dark);
+    animation-delay: 1.6s;
+    .score-details{animation-delay: 1.6s;}
   }
   &:nth-of-type(6){
     @include color-settings($color-red, $color-red-dark);
+    animation-delay: 2s;
+    .score-details{animation-delay: 2s;}
   }
   &:nth-of-type(7){
     @include color-settings($color-yellow, $color-yellow-dark);
+    animation-delay: 1.8s;
+    .score-details{animation-delay: 1.8s;}
   }
 }
 
 .score-details{
+  animation: hoverboard-scale 1s ease-in-out alternate infinite;
   position: relative;
+  z-index: 2;
   h1, h2, p{
     margin: 0;
     position: relative;
