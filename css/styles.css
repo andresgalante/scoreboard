@@ -89,8 +89,8 @@ body {
             filter: drop-shadow(0 0px 10px #00b9e4); } }
 
 .score {
-  -webkit-filter: drop-shadow(0 40px 10px rgba(0, 0, 0, 0.3));
-          filter: drop-shadow(0 40px 10px rgba(0, 0, 0, 0.3));
+  -webkit-filter: drop-shadow(0 50px 10px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0 50px 10px rgba(0, 0, 0, 0.3));
   -webkit-transition: .5s all ease;
   transition: .5s all ease;
   text-align: center;
