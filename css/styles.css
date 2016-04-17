@@ -62,11 +62,9 @@ body {
     left: 0;
     right: 0;
     z-index: -1;
-    background-image: -webkit-linear-gradient(right, #002235, transparent 20%), -webkit-linear-gradient(left, #002235, transparent 20%), -webkit-linear-gradient(#002235, transparent 80%), -webkit-linear-gradient(top, #007d9c, #007d9c 1px, transparent 1px);
-    background-image: linear-gradient(to left, #002235, transparent 20%), linear-gradient(to right, #002235, transparent 20%), linear-gradient(#002235, transparent 80%), linear-gradient(to bottom, #007d9c, #007d9c 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 20%;
-    -webkit-filter: opacity(0.5);
-            filter: opacity(0.5); }
+    background-image: -webkit-linear-gradient(right, #002235, transparent 20%), -webkit-linear-gradient(left, #002235, transparent 20%), -webkit-linear-gradient(#002235, transparent 80%), -webkit-linear-gradient(top, #007d9c, #007d9c 1px, transparent 1px), -webkit-linear-gradient(top, transparent, transparent 8px, rgba(0, 0, 0, 0.5) 8px, rgba(0, 0, 0, 0.5) 9px, transparent 9px);
+    background-image: linear-gradient(to left, #002235, transparent 20%), linear-gradient(to right, #002235, transparent 20%), linear-gradient(#002235, transparent 80%), linear-gradient(to bottom, #007d9c, #007d9c 1px, transparent 1px), linear-gradient(to bottom, transparent, transparent 8px, rgba(0, 0, 0, 0.5) 8px, rgba(0, 0, 0, 0.5) 9px, transparent 9px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 20%, 100% 20%; }
   .container:after {
     content: "";
     -webkit-animation: bg-move 7s linear infinite;

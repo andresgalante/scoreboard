@@ -74,9 +74,10 @@ body{
       linear-gradient(to left, $color-background, transparent 20%),
       linear-gradient(to right, $color-background, transparent 20%),
       linear-gradient($color-background, transparent 80%),
-      linear-gradient(to bottom, $color-blue-dark, $color-blue-dark 1px, transparent 1px);
-    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 20%;
-    filter: opacity(.5);
+      linear-gradient(to bottom, $color-blue-dark, $color-blue-dark 1px, transparent 1px),
+      linear-gradient(to bottom, transparent, transparent 8px, rgba(0,0,0,.5) 8px, rgba(0,0,0,.5) 9px, transparent 9px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 20%, 100% 20%;
+
   }
 
   &:after{
@@ -153,7 +154,6 @@ body{
 
 
 .score{
-//  filter:drop-shadow(0 50px 10px rgba(0,0,0,.3));
   animation: hoverboard-shadow 1s ease-in-out alternate infinite;
   transition: .5s all ease;
   text-align: center;
