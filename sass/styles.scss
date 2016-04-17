@@ -77,7 +77,8 @@ body{
       linear-gradient($color-background, transparent),
       linear-gradient(to bottom, $color-blue-dark, $color-blue-dark 1px, transparent 1px);
     background-size: 100% 100%, 100% 20%;
-     mix-blend-mode: normal, screen;
+    mix-blend-mode: normal, screen;
+    filter: opacity(.5);
   }
 
   &:after{

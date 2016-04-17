@@ -65,7 +65,9 @@ body {
     background-image: -webkit-linear-gradient(#002235, transparent), -webkit-linear-gradient(top, #007d9c, #007d9c 1px, transparent 1px);
     background-image: linear-gradient(#002235, transparent), linear-gradient(to bottom, #007d9c, #007d9c 1px, transparent 1px);
     background-size: 100% 100%, 100% 20%;
-    mix-blend-mode: normal, screen; }
+    mix-blend-mode: normal, screen;
+    -webkit-filter: opacity(0.5);
+            filter: opacity(0.5); }
   .container:after {
     content: "";
     -webkit-animation: bg-move 7s linear infinite;
