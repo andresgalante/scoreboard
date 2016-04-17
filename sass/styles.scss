@@ -130,7 +130,7 @@ body{
 
 @keyframes pulse-red{
   to{
-    filter:drop-shadow(0 0px 10px $color-blue);
+    filter:drop-shadow(0 10px 8px $color-blue);
   }
 }
 
